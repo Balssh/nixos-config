@@ -17,7 +17,7 @@
     ./hyprland # window manager
     ./kitty.nix # terminal
     ./swaync/swaync.nix # notification deamon
-    ./nvim.nix # neovim editor
+    ./nvim # neovim editor
     ./packages.nix # other packages
     ./rofi.nix # launcher
     ./scripts/scripts.nix # personal scripts
