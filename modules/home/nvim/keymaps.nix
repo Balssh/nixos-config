@@ -7,10 +7,10 @@
     keymaps = [
       {
         mode = "n";
-        action = "<cmd>Oil --float<cr>";
+        action = "<cmd>Yazi<cr>";
         key = "-";
         options = {
-          desc = "Open Oil";
+          desc = "Open Yazi";
         };
       }
       {
@@ -59,20 +59,34 @@
         };
       }
       {
-        mode = "n";
+        mode = ["i" "n"];
         key = "<C-s>";
-        action = "<cmd>wa!<cr>";
+        action = "<esc><cmd>w!<cr>";
         options = {
           desc = "Save file";
         };
       }
       {
-        mode = "i";
-        key = "<C-s>";
-        action = "<cmd>wa!<cr>";
+        mode = "n";
+        key = "<leader>bd";
+        action = "<cmd>bdelete<cr>";
         options = {
-          desc = "Save file";
+          desc = "[B]uffer [D]elete";
         };
+      }
+      {
+        mode = ["n" "v"];
+        action = {
+          __raw = ''
+            function()
+              require("conform").format({
+                lsp_fallback = true,
+                async = true,
+              })
+            end
+          '';
+        };
+        key = "<leader>bf";
       }
     ];
   };

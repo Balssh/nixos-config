@@ -48,6 +48,12 @@ in {
     wineWowPackages.wayland
     zenity
 
+    # Bash
+    shfmt
+
+    # Lua
+    stylua
+
     # C / C++
     gcc
     gnumake

@@ -61,11 +61,11 @@
         inherit system;
         modules = [
           ./hosts/laptop
-          {
-            imports = [inputs.aagl.nixosModules.default];
-            nix.settings = inputs.aagl.nixConfig; # Set up Cachix
-            programs.honkers-railway-launcher.enable = true;
-          }
+          # {
+          #   imports = [inputs.aagl.nixosModules.default];
+          #   nix.settings = inputs.aagl.nixConfig; # Set up Cachix
+          #   programs.honkers-railway-launcher.enable = true;
+          # }
         ];
         specialArgs = {
           host = "laptop";

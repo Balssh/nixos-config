@@ -3,6 +3,9 @@
     ./lsp.nix
     ./treesitter.nix
     ./completion.nix
+    ./fuzzy.nix
+    ./format.nix
+    ./mini.nix
   ];
 
   programs.nixvim = {
@@ -20,7 +23,8 @@
         };
       };
 
-      oil.enable = true;
+      # oil.enable = true;
+      yazi.enable = true;
       sleuth.enable = true;
     };
   };
