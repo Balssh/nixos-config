@@ -32,6 +32,7 @@
         servers = {
           clangd.enable = true;
           lua-ls.enable = true;
+          gopls.enable = true;
         };
 
         onAttach = ''
