@@ -5,6 +5,9 @@
   host,
   ...
 }: {
+  home.packages = with pkgs; [
+    zsh-fzf-tab
+  ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -24,6 +27,7 @@
       setopt hist_expire_dups_first
       setopt hist_ignore_dups
       setopt hist_verify
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
 
       # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
       # - The first argument to the function ($1) is the base path to start traversal
@@ -52,15 +56,18 @@
       }
       bindkey '^p' history-search-backward
       bindkey '^n' history-search-forward
+
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+      zstyle ':completion:*' menu no
+      zstyle ':fzf-tab:*' group-colors '''
     '';
     shellAliases = {
       # Utils
       c = "clear";
       cd = "z";
       tt = "gtrash put";
+      grep = "rg";
       cat = "bat";
-      nano = "micro";
-      code = "codium";
       py = "python";
       icat = "kitten icat";
       dsize = "du -hs";
@@ -74,7 +81,7 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
-      cdnix = "cd ~/nixos-config && codium ~/nixos-config";
+      cdnix = "cd ~/nixos-config";
       ns = "nom-shell --run zsh";
       nix-switch = "nh os switch";
       nix-update = "nh os switch --update";
