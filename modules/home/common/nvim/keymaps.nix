@@ -88,6 +88,29 @@
         };
         key = "<leader>bf";
       }
+      {
+        mode = ["n"];
+        action = {
+          __raw = ''
+            function()
+              local Terminal = require('toggleterm.terminal').Terminal:new { cmd = 'lazygit', dir = 'git_dir', hidden = true }
+              Terminal:toggle()
+            end
+          '';
+        };
+        key = "<leader>gg";
+      }
+      {
+        mode = ["n"];
+        action = {
+          __raw = ''
+            function()
+              require('gitsigns').blame_line()
+            end
+          '';
+        };
+        key = "<leader>gb";
+      }
     ];
   };
 }

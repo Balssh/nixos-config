@@ -1,8 +1,6 @@
 {
   programs.nixvim = {
     plugins = {
-      lsp-format.enable = true;
-
       lsp = {
         enable = true;
 
@@ -21,11 +19,9 @@
           };
 
           lspBuf = {
-            gd = "definition";
-            gD = "references";
-            gt = "type_definition";
-            gi = "implementation";
             K = "hover";
+            "<leader>ca" = "code_action";
+            "<leader>lr" = "rename";
           };
         };
 
@@ -33,6 +29,8 @@
           clangd.enable = true;
           lua-ls.enable = true;
           gopls.enable = true;
+          basedpyright.enable = true;
+          ruff-lsp.enable = true;
         };
 
         onAttach = ''
@@ -64,10 +62,35 @@
           end
 
           if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-            map('<leader>lh', function()
-              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-            end, '[L]SP Inlay [H]ints')
+            map('<leader>th', function()
+              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+            end, '[T]oggle Inlay [H]ints')
           end
+
+          -- Jump to the definition of the word under your cursor.
+          --  To jump back, press <C-t>.
+          map('gd', require('fzf-lua').lsp_definitions, '[G]oto [D]efinition')
+
+          -- Find references for the word under your cursor.
+          map('gr', require('fzf-lua').lsp_references, '[G]oto [R]eferences')
+
+          -- Jump to the implementation of the word under your cursor.
+          --  Useful when your language has ways of declaring types without an actual implementation.
+          map('gI', require('fzf-lua').lsp_implementations, '[G]oto [I]mplementation')
+
+          -- Jump to the type of the word under your cursor.
+          --  Useful when you're not sure what type a variable is and you want to see
+          --  the definition of its *type*, not where it was *defined*.
+          map('<leader>lD', require('fzf-lua').lsp_typedefs, '[L]SP Type [D]efinition')
+
+          -- Fuzzy find all the symbols in your current document.
+          --  Symbols are things like variables, functions, types, etc.
+          map('<leader>lsd', require('fzf-lua').lsp_document_symbols, '[L]SP [S]ymbols [D]ocument ')
+
+          -- Fuzzy find all the symbols in your current workspace
+          --  Similar to document symbols, except searches over your whole project.
+          map('<leader>lsw', require('fzf-lua').lsp_live_workspace_symbols, '[L]SP [S]ymbols [W]orkspace')
+
         '';
       };
     };

@@ -45,6 +45,7 @@
         style = "bg:color_orange bold fg:color_fg0";
         symbols = {
           NixOS = " ";
+          Ubuntu =" ";
         };
       };
 

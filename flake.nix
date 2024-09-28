@@ -45,6 +45,7 @@
 
   outputs = {
     nixpkgs,
+    home-manager,
     self,
     ...
   } @ inputs: let
@@ -67,12 +68,18 @@
           inherit self inputs username;
         };
       };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [./hosts/vm];
-        specialArgs = {
-          host = "vm";
-          inherit self inputs username;
+    };
+
+    homeConfigurations = {
+      work = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        modules = [
+          ./modules/home/work
+        ];
+
+        extraSpecialArgs = {
+          inherit inputs username;
         };
       };
     };

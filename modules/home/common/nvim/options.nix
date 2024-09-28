@@ -1,5 +1,9 @@
 {
   programs.nixvim = {
+    globals = {
+      loaded_netrw = 1;
+      loaded_netrwPlugin = 1;
+    };
     opts = {
       # Disable swapfile
       swapfile = false;
