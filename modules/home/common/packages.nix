@@ -11,7 +11,6 @@
     ffmpeg
     file # Show file information
     killall
-    lazygit
     man-pages # extra man pages
     gdu # disk space
     openssl
