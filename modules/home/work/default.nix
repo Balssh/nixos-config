@@ -7,6 +7,7 @@
   imports = [
     ../common
     ./git.nix
+    ./packages.nix
   ];
   home = {
     username = "${username}";
