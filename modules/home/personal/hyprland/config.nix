@@ -18,7 +18,7 @@
         "hyprlock"
 
         ## App auto start
-        "[workspace 1 silent] firefox"
+        "[workspace 1 silent] flatpak run io.github.zen_browser.zen"
         "[workspace 2 silent] kitty"
       ];
 
