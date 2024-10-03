@@ -21,6 +21,11 @@
         "$git_status"
         "[](fg:color_aqua bg:color_blue)"
         "$nix_shell"
+        "$c"
+        "$rust"
+        "$golang"
+        "$nodejs"
+        "$python"
         "[](fg:color_blue bg:color_bg3)"
         "$cmd_duration"
         "[](fg:color_bg3) "
@@ -45,7 +50,7 @@
         style = "bg:color_orange bold fg:color_fg0";
         symbols = {
           NixOS = " ";
-          Ubuntu =" ";
+          Ubuntu = " ";
         };
       };
 
@@ -69,6 +74,36 @@
       nix_shell = {
         format = "[ via nix $name ]($style)";
         style = "bg:color_blue bold fg:color_fg0";
+      };
+
+      nodejs = {
+        symbol = "";
+        style = "bg:color_blue";
+        format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)";
+      };
+
+      c = {
+        symbol = " ";
+        style = "bg:color_blue";
+        format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)";
+      };
+
+      rust = {
+        symbol = "";
+        style = "bg:color_blue";
+        format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)";
+      };
+
+      golang = {
+        symbol = "";
+        style = "bg:color_blue";
+        format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)";
+      };
+
+      python = {
+        symbol = "";
+        style = "bg:color_blue";
+        format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)";
       };
 
       time = {
