@@ -30,6 +30,7 @@
       };
 
       sleuth.enable = true;
+      web-devicons.enable = true;
 
       toggleterm = {
         enable = true;
