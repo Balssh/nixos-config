@@ -12,11 +12,19 @@
             zsh = ["shfmt"];
             cpp = ["clang_format"];
             nix = ["alejandra"];
+            groovy = ["groovy"];
             "_" = [
               "squeeze_blanks"
               "trim_whitespace"
               "trim_newlines"
             ];
+          };
+          formatters = {
+            groovy = {
+              command = "/home/balssh/.npm-packages/bin/npm-groovy-lint";
+              args = "--noserver --format $FILENAME";
+              stdin = false;
+            };
           };
         };
       };

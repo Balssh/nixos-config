@@ -100,7 +100,12 @@
     initExtraFirst = ''
       DISABLE_AUTO_UPDATE=true
       DISABLE_MAGIC_FUNCTIONS=true
+
       export "MICRO_TRUECOLOR=1"
+      # Below exports are necessary for installing npm packages globally
+      # in addition to having "prefix = $HOME/.npm-packages" in ~/.npmrc
+      export PATH=~/.npm-packages/bin:$PATH
+      export NODE_PATH=~/.npm-packages/lib/node_modules
 
       setopt sharehistory
       setopt hist_ignore_space
