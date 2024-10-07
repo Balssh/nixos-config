@@ -4,17 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nur.url = "github:nix-community/NUR";
-
     hypr-contrib.url = "github:hyprwm/contrib";
 
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-
-    nix-gaming.url = "github:fufexan/nix-gaming";
-
-    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
 
     nixvim = {
       url = "github:nix-community/nixvim";

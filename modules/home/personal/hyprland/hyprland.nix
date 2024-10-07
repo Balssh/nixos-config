@@ -4,7 +4,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # swww
     swaybg
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
     hyprpicker
@@ -23,7 +22,6 @@
       enable = true;
       # hidpi = true;
     };
-    # enableNvidiaPatches = false;
     systemd.enable = true;
   };
 }

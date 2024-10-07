@@ -6,15 +6,19 @@
 }: {
   imports = [inputs.aagl.nixosModules.default];
   nix.settings = inputs.aagl.nixConfig; # Set up Cachix
-  programs.honkers-railway-launcher.enable = true;
+  programs = {
+    honkers-railway-launcher.enable = true;
 
-  programs.dconf.enable = true;
-  programs.zsh.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    # pinentryFlavor = "";
+    dconf.enable = true;
+    zsh.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+      # pinentryFlavor = "";
+    };
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [];
+    };
   };
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [];
 }

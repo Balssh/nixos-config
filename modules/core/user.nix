@@ -12,9 +12,11 @@
     extraSpecialArgs = {inherit inputs username host;};
     users.${username} = {
       imports = [./../home/personal];
-      home.username = "${username}";
-      home.homeDirectory = "/home/${username}";
-      home.stateVersion = "24.05";
+      home = {
+        username = "${username}";
+        homeDirectory = "/home/${username}";
+        stateVersion = "24.05";
+      };
       programs.home-manager.enable = true;
     };
   };

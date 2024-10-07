@@ -4,8 +4,10 @@
   libs,
   ...
 }: {
-  services.xserver.videoDrivers = ["nvidia"];
-  services.blueman.enable = true;
+  services = {
+    xserver.videoDrivers = ["nvidia"];
+    blueman.enable = true;
+  };
   hardware = {
     graphics = {
       enable = true;
