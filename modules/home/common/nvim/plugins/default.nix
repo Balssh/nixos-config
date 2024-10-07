@@ -31,6 +31,7 @@
 
       sleuth.enable = true;
       web-devicons.enable = true;
+      markview.enable = true;
 
       toggleterm = {
         enable = true;
