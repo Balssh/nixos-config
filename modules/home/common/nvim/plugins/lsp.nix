@@ -27,10 +27,10 @@
 
         servers = {
           clangd.enable = true;
-          lua-ls.enable = true;
+          lua_ls.enable = true;
           gopls.enable = true;
           basedpyright.enable = true;
-          ruff-lsp.enable = true;
+          ruff_lsp.enable = true;
         };
 
         onAttach = ''
