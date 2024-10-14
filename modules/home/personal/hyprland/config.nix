@@ -60,7 +60,6 @@
       };
 
       dwindle = {
-        no_gaps_when_only = true;
         force_split = 0;
         special_scale_factor = 1.0;
         split_width_multiplier = 1.0;
@@ -72,7 +71,6 @@
       master = {
         new_status = "master";
         special_scale_factor = 1;
-        no_gaps_when_only = false;
       };
 
       decoration = {
@@ -243,6 +241,12 @@
         ",XF86AudioLowerVolume,exec, pamixer -d 2"
         ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
         ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+      ];
+
+      # workspace rule
+      workspace = [
+        "w[t1], gapsout:0, gapsin:0, border: 0, rounding:0"
+        "w[tg1], gapsout:0, gapsin:0, border: 0, rounding:0"
       ];
 
       # windowrule
