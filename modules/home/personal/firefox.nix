@@ -42,11 +42,6 @@
       userChrome = ''
         /* some css */
       '';
-
-      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
-        bitwarden
-        ublock-origin
-      ];
     };
   };
 
