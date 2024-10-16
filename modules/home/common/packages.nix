@@ -21,6 +21,8 @@
     yazi # terminal file manager
     xxd
 
+    git-lfs
+
     ## CLI
     bottom
 
