@@ -4,7 +4,11 @@
       fzf-lua = {
         enable = true;
         profile = "fzf-native";
-        # settings = { };
+        settings = {
+          fzf_opts = {
+            "--cycle" = "";
+          };
+        };
         keymaps = {
           "<leader>sg" = "live_grep";
           "<leader>sf" = "files";
