@@ -9,9 +9,7 @@
     blueman.enable = true;
   };
   hardware = {
-    graphics = {
-      enable = true;
-    };
+    graphics.enable = true;
 
     nvidia = {
       modesetting.enable = true;
