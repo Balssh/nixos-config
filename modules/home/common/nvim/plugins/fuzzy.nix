@@ -8,6 +8,11 @@
           fzf_opts = {
             "--cycle" = "";
           };
+          keymap.fzf = {
+            __unkeyed-1 = false; # do not inherit from defaults
+            ctrl-d = "preview-half-page-down";
+            ctrl-u = "preview-half-page-up";
+          };
         };
         keymaps = {
           "<leader>sg" = "live_grep";
