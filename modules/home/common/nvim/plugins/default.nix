@@ -31,7 +31,7 @@
 
       sleuth.enable = true;
       web-devicons.enable = true;
-      markview.enable = true;
+      render-markdown.enable = true;
 
       toggleterm = {
         enable = true;

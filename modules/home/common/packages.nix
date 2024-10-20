@@ -48,6 +48,6 @@
     #node
     nodejs
 
-    inputs.alejandra.defaultPackage.${system}
+    nixfmt-rfc-style
   ];
 }

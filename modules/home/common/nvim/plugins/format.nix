@@ -11,7 +11,7 @@
             sh = ["shfmt"];
             zsh = ["shfmt"];
             cpp = ["clang_format"];
-            nix = ["alejandra"];
+            nix = ["nixfmt"];
             groovy = ["groovy"];
             "_" = [
               "squeeze_blanks"
