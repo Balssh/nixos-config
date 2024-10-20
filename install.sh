@@ -22,8 +22,7 @@ confirm() {
     echo -en "[${GREEN}y${NORMAL}/${RED}n${NORMAL}]: "
     read -n 1 -r
     echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]
-    then
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         exit 0
     fi
 }
@@ -62,21 +61,19 @@ set_username() {
 }
 
 get_host() {
-    echo -en "Choose a ${GREEN}host${NORMAL} - [${YELLOW}D${NORMAL}]esktop, [${YELLOW}L${NORMAL}]aptop or [${YELLOW}V${NORMAL}]irtual machine: "
+    echo -en "Choose a ${GREEN}host${NORMAL} - [${YELLOW}L${NORMAL}]aptop or [${YELLOW}V${NORMAL}]irtual machine: "
     read -n 1 -r
     echo
 
-    if [[ $REPLY =~ ^[Dd]$ ]]; then
-        HOST='desktop'
-    elif [[ $REPLY =~ ^[Ll]$ ]]; then
+    if [[ $REPLY =~ ^[Ll]$ ]]; then
         HOST='laptop'
-     elif [[ $REPLY =~ ^[Vv]$ ]]; then
+    elif [[ $REPLY =~ ^[Vv]$ ]]; then
         HOST='vm'
     else
-        echo "Invalid choice. Please select 'D' for desktop, 'L' for laptop or 'V' for virtual machine."
+        echo "Invalid choice. 'L' for laptop or 'V' for virtual machine."
         exit 1
     fi
-    
+
     echo -en "$NORMAL"
     echo -en "Use the$YELLOW "$HOST"$NORMAL ${GREEN}host${NORMAL} ? "
     confirm
