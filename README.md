@@ -27,11 +27,11 @@
 | **Bar**                     | [Waybar][Waybar] |
 | **Application Launcher**    | [rofi][rofi] |
 | **Notification Daemon**     | [swaync][swaync] |
-| **Terminal Emulator**       | [Wezterm][Wezterm] |
-| **Shell**                   | [zsh][zsh] + [oh-my-zsh][oh-my-zsh] + [Starship][Starship] |
-| **Text Editor**             | [VSCodium][VSCodium] + [Neovim][Neovim] |
+| **Terminal Emulator**       | [Kitty][Kitty] |
+| **Shell**                   | [zsh][zsh] + [antidote][antidote] + [Starship][Starship] |
+| **Text Editor**             | [Neovim][Neovim] |
 | **network management tool** | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
-| **System resource monitor** | [Btop][Btop] |
+| **System resource monitor** | [bottom][bottom] |
 | **File Manager**            | [nemo][nemo] + [yazi][yazi] |
 | **Fonts**                   | [CascadiaCode Nerd Font][Nerd fonts] + [JetBrainsMono Nerd Font][Nerd fonts] |
 | **Color Scheme**            | [Gruvbox Dark Hard][Gruvbox] |
@@ -40,7 +40,6 @@
 | **Lockscreen**              | [Hyprlock][Hyprlock] + [Swaylock-effects][Swaylock-effects] |
 | **Image Viewer**            | [qview][qview] |
 | **Media Player**            | [mpv][mpv] |
-| **Music Player**            | [audacious][audacious] |
 | **Screenshot Software**     | [grimblast][grimblast] |
 | **Screen Recording**        | [wf-recorder][wf-recorder] |
 | **Clipboard**               | [wl-clip-persist][wl-clip-persist] |
