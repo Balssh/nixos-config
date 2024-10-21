@@ -1,4 +1,5 @@
-{host, ...}: let
+{ host, ... }:
+let
   custom = {
     font = "JetBrainsMono Nerd Font";
     font_size = "18px";
@@ -17,7 +18,8 @@
     opacity = "1";
     indicator_height = "2px";
   };
-in {
+in
+{
   programs.waybar.settings.mainBar = with custom; {
     position = "top";
     layer = "top";
@@ -37,11 +39,7 @@ in {
     modules-right = [
       "cpu"
       "memory"
-      (
-        if (host == "desktop")
-        then "disk"
-        else ""
-      )
+      (if (host == "desktop") then "disk" else "")
       "pulseaudio"
       "network"
       "battery"
@@ -49,7 +47,9 @@ in {
     ];
     clock = {
       calendar = {
-        format = {today = "<span color='#98971A'><b>{}</b></span>";};
+        format = {
+          today = "<span color='#98971A'><b>{}</b></span>";
+        };
       };
       format = "  {:%H:%M}";
       tooltip = "true";
@@ -75,11 +75,11 @@ in {
         sort-by-number = true;
       };
       persistent-workspaces = {
-        "1" = [];
-        "2" = [];
-        "3" = [];
-        "4" = [];
-        "5" = [];
+        "1" = [ ];
+        "2" = [ ];
+        "3" = [ ];
+        "4" = [ ];
+        "5" = [ ];
       };
     };
     cpu = {
@@ -112,9 +112,9 @@ in {
       format = "{icon} {volume}%";
       format-muted = "<span foreground='${blue}'> </span> {volume}%";
       format-icons = {
-        default = ["<span foreground='${blue}'> </span>"];
-        headphone = ["<span foreground='${blue}'> </span>"];
-        headset = ["<span foreground='${blue}'> </span>"];
+        default = [ "<span foreground='${blue}'> </span>" ];
+        headphone = [ "<span foreground='${blue}'> </span>" ];
+        headset = [ "<span foreground='${blue}'> </span>" ];
       };
       scroll-step = 5;
       on-click = "pamixer -t";
@@ -122,7 +122,13 @@ in {
     };
     battery = {
       format = "<span foreground='${yellow}'>{icon}</span> {capacity}%";
-      format-icons = [" " " " " " " " " "];
+      format-icons = [
+        " "
+        " "
+        " "
+        " "
+        " "
+      ];
       format-charging = "<span foreground='${yellow}'> </span>{capacity}%";
       format-full = "<span foreground='${yellow}'> </span>{capacity}%";
       format-warning = "<span foreground='${yellow}'> </span>{capacity}%";

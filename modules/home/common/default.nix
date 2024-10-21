@@ -3,7 +3,8 @@
   username,
   host,
   ...
-}: {
+}:
+{
   imports = [
     ./bat.nix # better cat command
     ./fastfetch.nix # fetch tool

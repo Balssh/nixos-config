@@ -4,7 +4,8 @@
   inputs,
   system,
   ...
-}: {
+}:
+{
   programs.firefox = {
     enable = true;
     profiles.balssh = {
@@ -27,7 +28,7 @@
           ];
 
           icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          definedAliases = ["@np"];
+          definedAliases = [ "@np" ];
         };
       };
       search.force = true;
@@ -46,9 +47,9 @@
   };
 
   xdg.mimeApps.defaultApplications = {
-    "text/html" = ["firefox.desktop"];
-    "text/xml" = ["firefox.desktop"];
-    "x-scheme-handler/http" = ["firefox.desktop"];
-    "x-scheme-handler/https" = ["firefox.desktop"];
+    "text/html" = [ "firefox.desktop" ];
+    "text/xml" = [ "firefox.desktop" ];
+    "x-scheme-handler/http" = [ "firefox.desktop" ];
+    "x-scheme-handler/https" = [ "firefox.desktop" ];
   };
 }

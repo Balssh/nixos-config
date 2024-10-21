@@ -1,4 +1,5 @@
-{...}: let
+{ ... }:
+let
   custom = {
     font = "JetBrainsMono Nerd Font, Noto Sans CJK JP";
     font_size = "16px";
@@ -17,7 +18,8 @@
     opacity = "1";
     indicator_height = "2px";
   };
-in {
+in
+{
   programs.waybar.style = with custom; ''
     * {
       border: none;

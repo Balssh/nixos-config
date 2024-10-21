@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland = {
     settings = {
       # autostart
@@ -86,7 +87,7 @@
           # size = 4;
           # passes = 2;
           brightness = 1;
-          contrast = 1.400;
+          contrast = 1.4;
           ignore_opacity = true;
           noise = 0;
           new_optimizations = true;

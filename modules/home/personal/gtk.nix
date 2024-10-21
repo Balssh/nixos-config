@@ -2,13 +2,20 @@
   pkgs,
   config,
   ...
-}: let
-  monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix {};
-  monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix {inherit monolisa;};
-in {
+}:
+let
+  monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix { };
+  monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix { inherit monolisa; };
+in
+{
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode"];})
+    (nerdfonts.override {
+      fonts = [
+        "JetBrainsMono"
+        "FiraCode"
+      ];
+    })
     twemoji-color-font
     noto-fonts-emoji
     noto-fonts-cjk
@@ -25,7 +32,7 @@ in {
     theme = {
       name = "Gruvbox-Dark";
       package = pkgs.gruvbox-gtk-theme.override {
-        colorVariants = ["dark"];
+        colorVariants = [ "dark" ];
       };
     };
     iconTheme = {

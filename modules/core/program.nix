@@ -3,8 +3,9 @@
   lib,
   inputs,
   ...
-}: {
-  imports = [inputs.aagl.nixosModules.default];
+}:
+{
+  imports = [ inputs.aagl.nixosModules.default ];
   nix.settings = inputs.aagl.nixConfig; # Set up Cachix
   programs = {
     honkers-railway-launcher.enable = true;
@@ -18,7 +19,7 @@
     };
     nix-ld = {
       enable = true;
-      libraries = with pkgs; [];
+      libraries = with pkgs; [ ];
     };
   };
 }

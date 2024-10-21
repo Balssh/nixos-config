@@ -10,11 +10,11 @@
           statusline = {
             use_icons = true;
           };
-          tabline = {};
-          trailspace = {};
-          bufremove = {};
-          bracketed = {};
-          surround = {};
+          tabline = { };
+          trailspace = { };
+          bufremove = { };
+          bracketed = { };
+          surround = { };
         };
       };
     };

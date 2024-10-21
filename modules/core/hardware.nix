@@ -3,9 +3,10 @@
   config,
   libs,
   ...
-}: {
+}:
+{
   services = {
-    xserver.videoDrivers = ["nvidia"];
+    xserver.videoDrivers = [ "nvidia" ];
     blueman.enable = true;
   };
   hardware = {

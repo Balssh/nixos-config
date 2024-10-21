@@ -59,7 +59,10 @@
         };
       }
       {
-        mode = ["i" "n"];
+        mode = [
+          "i"
+          "n"
+        ];
         key = "<C-s>";
         action = "<esc><cmd>w!<cr>";
         options = {
@@ -75,7 +78,10 @@
         };
       }
       {
-        mode = ["n" "v"];
+        mode = [
+          "n"
+          "v"
+        ];
         action = {
           __raw = ''
             function()
@@ -89,7 +95,7 @@
         key = "<leader>bf";
       }
       {
-        mode = ["n"];
+        mode = [ "n" ];
         action = {
           __raw = ''
             function()
@@ -101,7 +107,7 @@
         key = "<leader>gg";
       }
       {
-        mode = ["n"];
+        mode = [ "n" ];
         action = {
           __raw = ''
             function()

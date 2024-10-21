@@ -3,7 +3,8 @@
   username,
   host,
   ...
-}: {
+}:
+{
   imports = [
     ../common
     ./cava.nix # audio visualizer

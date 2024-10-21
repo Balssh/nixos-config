@@ -19,9 +19,12 @@ stdenv.mkDerivation rec {
       $ nix-hash --flat --base32 --type sha256 /path/to/${name}'';
   };
 
-  buildInputs = [unzip];
-  phases = ["unpackPhase" "installPhase"];
-  pathsToLink = ["/share/fonts/truetype/"];
+  buildInputs = [ unzip ];
+  phases = [
+    "unpackPhase"
+    "installPhase"
+  ];
+  pathsToLink = [ "/share/fonts/truetype/" ];
   sourceRoot = ".";
 
   installPhase = ''

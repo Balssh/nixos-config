@@ -2,7 +2,8 @@
   pkgs,
   host,
   ...
-}: {
+}:
+{
   programs.kitty = {
     enable = true;
 
@@ -10,10 +11,7 @@
 
     font = {
       name = "FiraCode Nerd Font";
-      size =
-        if (host == "laptop")
-        then 12
-        else 16;
+      size = if (host == "laptop") then 12 else 16;
     };
 
     settings = {

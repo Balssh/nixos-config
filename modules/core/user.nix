@@ -4,14 +4,17 @@
   username,
   host,
   ...
-}: {
-  imports = [inputs.home-manager.nixosModules.home-manager];
+}:
+{
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = {inherit inputs username host;};
+    extraSpecialArgs = {
+      inherit inputs username host;
+    };
     users.${username} = {
-      imports = [./../home/personal];
+      imports = [ ./../home/personal ];
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
@@ -24,8 +27,11 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
-  nix.settings.allowed-users = ["${username}"];
+  nix.settings.allowed-users = [ "${username}" ];
 }
