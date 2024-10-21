@@ -17,6 +17,7 @@
     ./program.nix
     ./security.nix
     ./services.nix
+    ./secureboot.nix
     ./steam.nix
     ./system.nix
     ./user.nix
