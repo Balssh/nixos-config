@@ -21,6 +21,8 @@
     wget
     yazi # terminal file manager
     xxd
+    lazydocker
+    dive
 
     git-lfs
 
