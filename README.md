@@ -50,7 +50,7 @@
 
 # 🎯 Things I'd like to implement further
 
-- [ ] secure boot with lanzaboote
+- [X] secure boot with lanzaboote
 - [ ] secret management with sops or agenix
 - [ ] dev environments
 - [ ] VM configuration and usage

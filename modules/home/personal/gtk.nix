@@ -18,7 +18,7 @@ in
     })
     twemoji-color-font
     noto-fonts-emoji
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     # monolisa
     # monolisa-nerd
   ];
