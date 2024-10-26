@@ -31,6 +31,20 @@
           gopls.enable = true;
           basedpyright.enable = true;
           ruff_lsp.enable = true;
+          nixd = {
+            enable = true;
+            extraOptions = {
+              nixpkgs = {
+                "expr" = ''import (builtins.getFlake "/home/balssh/nixos-config/").inputs.nixpkgs { }'';
+              };
+              nixos = {
+                expr = ''(builtins.getFlake "/home/balssh/nixos-config/").nixosConfigurations.laptop.options'';
+              };
+              home_manager = {
+                expr = ''(builtins.getFlake "/home/balssh/nixos-config/").homeConfigurations.work.options'';
+              };
+            };
+          };
         };
 
         onAttach = ''
