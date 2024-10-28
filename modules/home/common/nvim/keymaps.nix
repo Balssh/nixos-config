@@ -117,6 +117,61 @@
         };
         key = "<leader>gb";
       }
+      {
+        mode = [
+          "n"
+          "x"
+          "o"
+        ];
+        action = {
+          __raw = ''
+            function()
+              require("flash").jump()
+            end
+          '';
+        };
+        key = "gs";
+      }
+      {
+        mode = [
+          "n"
+          "x"
+          "o"
+        ];
+        action = {
+          __raw = ''
+            function()
+              require("flash").treesitter()
+            end
+          '';
+        };
+        key = "gS";
+      }
+      {
+        mode = [ "o" ];
+        action = {
+          __raw = ''
+            function()
+              require("flash").remote()
+            end
+          '';
+        };
+        key = "r";
+      }
+      {
+        mode = [
+          "x"
+          "o"
+        ];
+        action = {
+          __raw = ''
+            function()
+              require("flash").treesitter_search()
+            end
+          '';
+        };
+        key = "R";
+      }
     ];
   };
 }

@@ -32,6 +32,7 @@
       sleuth.enable = true;
       web-devicons.enable = true;
       render-markdown.enable = true;
+      flash.enable = true;
 
       toggleterm = {
         enable = true;
