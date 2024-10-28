@@ -31,6 +31,7 @@
           gopls.enable = true;
           basedpyright.enable = true;
           ruff_lsp.enable = true;
+          bashls.enable = true;
           nixd = {
             enable = true;
             extraOptions = {
