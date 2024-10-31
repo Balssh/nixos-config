@@ -24,8 +24,10 @@
           highlight = {
             use_nvim_cmp_as_default = true;
           };
-          documentation = {
-            auto_show = true;
+          windows = {
+            documentation = {
+              auto_show = true;
+            };
           };
           accept = {
             auto_brackets = {
