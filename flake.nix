@@ -33,6 +33,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # zen-browser = {
+    #   url = "path:/home/balssh/nixos-config/pkgs/zen/";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =
