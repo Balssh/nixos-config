@@ -19,7 +19,7 @@
         "hyprlock"
 
         ## App auto start
-        "[workspace 1 silent] flatpak run io.github.zen_browser.zen"
+        "[workspace 1 silent] zen"
         "[workspace 2 silent] kitty"
       ];
 
@@ -139,7 +139,7 @@
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'"
+        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] zen'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
@@ -273,6 +273,8 @@
         "float,title:^(Volume Control)$"
         "float,title:^(Firefox — Sharing Indicator)$"
         "move 0 0,title:^(Firefox — Sharing Indicator)$"
+        "float,title:^(Zen — Sharing Indicator)$"
+        "move 0 0,title:^(Zen — Sharing Indicator)$"
         "size 700 450,title:^(Volume Control)$"
         "center,title:^(Volume Control)$"
       ];
@@ -296,6 +298,7 @@
         "workspace 5, class:^(Spotify)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
+        "idleinhibit fullscreen, class:^(zen)$"
         "float,class:^(zenity)$"
         "center,class:^(zenity)$"
         "size 850 500,class:^(zenity)$"
