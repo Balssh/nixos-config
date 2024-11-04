@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }:
@@ -19,7 +18,7 @@
     ripgrep # grep replacement
     unzip
     wget
-    yazi # terminal file manager
+    # yazi # terminal file manager
     xxd
     lazydocker
     dive
