@@ -6,7 +6,7 @@
     ./fuzzy.nix
     ./format.nix
     ./mini.nix
-    # ./yazi.nix
+    ./file-explorer.nix
   ];
 
   programs.nixvim = {

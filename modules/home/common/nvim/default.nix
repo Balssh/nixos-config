@@ -17,6 +17,7 @@
         standalonePlugins = [
           "hmts.nvim"
           "nvim-treesitter"
+          "oil.nvim"
         ];
       };
       byteCompileLua.enable = true;

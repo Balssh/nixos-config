@@ -7,10 +7,10 @@
     keymaps = [
       {
         mode = "n";
-        action = "<cmd>Yazi<cr>";
+        action = "<cmd>Oil<cr>";
         key = "-";
         options = {
-          desc = "Open Yazi";
+          desc = "Open Oil";
         };
       }
       {
