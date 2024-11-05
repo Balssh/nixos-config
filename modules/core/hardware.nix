@@ -25,6 +25,11 @@
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+      settings = {
+        General = {
+          ControllerMode = "bredr";
+        };
+      };
     };
   };
   hardware.enableRedistributableFirmware = true;
