@@ -11,7 +11,7 @@
     grim
     slurp
     wl-clip-persist
-    # wf-recorder
+    wf-recorder
     glib
     wayland
     direnv
