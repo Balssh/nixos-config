@@ -19,7 +19,7 @@
       open = false;
       nvidiaSettings = true;
 
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
 
     bluetooth = {
@@ -27,7 +27,7 @@
       powerOnBoot = true;
       settings = {
         General = {
-          ControllerMode = "bredr";
+          ControllerMode = "dual";
         };
       };
     };

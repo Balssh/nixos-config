@@ -55,11 +55,11 @@ let
 in
 pkgs.stdenv.mkDerivation rec {
   pname = "zen-browser";
-  version = "1.0.1-a.17";
+  version = "1.0.1-a.19";
   system = "x86_64-linux";
   src = builtins.fetchTarball {
     url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-specific.tar.bz2";
-    sha256 = "0ahpig3kafphg0pnkl1r60b9phfp5s2rilpxb20q2fwz41d1miwi";
+    sha256 = "1n6z8wx8w7dhir8vaqbc19ibhsc6g6rma4kvx2nw04l8b4hxg9bg";
   };
 
   desktopSrc = ./.;
@@ -69,10 +69,10 @@ pkgs.stdenv.mkDerivation rec {
     "fixupPhase"
   ];
 
-  nativeBuildInputs = [
-    pkgs.makeWrapper
-    pkgs.copyDesktopItems
-    pkgs.wrapGAppsHook
+  nativeBuildInputs = with pkgs; [
+    makeWrapper
+    copyDesktopItems
+    wrapGAppsHook
   ];
 
   installPhase = ''
