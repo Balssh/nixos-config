@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     ## CLI utility
     jq
+    yq-go
     eza # ls replacement
     fd # find replacement
     ffmpeg
@@ -18,7 +19,7 @@
     ripgrep # grep replacement
     unzip
     wget
-    # yazi # terminal file manager
+    just
     xxd
     lazydocker
     dive
