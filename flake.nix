@@ -33,6 +33,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -40,6 +45,7 @@
       nixpkgs,
       home-manager,
       self,
+      disko,
       ...
     }@inputs:
     let
@@ -60,6 +66,17 @@
           ];
           specialArgs = {
             host = "laptop";
+            inherit self inputs username;
+          };
+        };
+        server = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            disko.nixosModules.disko
+            ./hosts/server
+          ];
+          specialArgs = {
+            host = "homelab";
             inherit self inputs username;
           };
         };

@@ -10,10 +10,6 @@ in
 {
   home.packages = with pkgs; [
     ## CLI utility
-    ani-cli
-
-    # TODO: remove the override once the PR fixing this is in
-    # nixpkgs-unstable
     cliphist
     ffmpeg
     file # Show file information

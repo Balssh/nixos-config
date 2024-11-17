@@ -7,7 +7,7 @@
 {
   imports = [
     ../common
-    ./cava.nix # audio visualizer
+    # ./cava.nix # audio visualizer
     ./firefox.nix # firefox
     ./git.nix # version control
     ./gnome.nix # gnome apps
