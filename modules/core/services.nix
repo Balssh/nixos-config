@@ -1,6 +1,10 @@
 { ... }:
 {
   services = {
+    openssh = {
+      enable = true;
+      ports = [ 22 ];
+    };
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
     dbus.enable = true;

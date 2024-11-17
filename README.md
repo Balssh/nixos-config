@@ -48,6 +48,12 @@
 # 📥 Installation
 >[!TODO]
 
+# Home-server deployment notes
+- use `nixos-rebuild switch --flake .#server --target-host <user>@<ip> --use-remote-sudo`
+- <user> will need to be declared in `nix.settings.trusted-users`
+- building will be done on localhost which then tries to connect to the server through ssh
+    - might be a good idea to also add localhost sshkey to server
+
 # 🎯 Things I'd like to implement further
 
 - [X] secure boot with lanzaboote
